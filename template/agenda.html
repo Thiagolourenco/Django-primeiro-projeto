@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Agenda</title>
+    </head>
+    <body>
+        <a href="/logout ">Logout</a>
+        <h2>Agendamentos</h2>
+        {% for x in evento %}
+            <b>{{x.titulo}} - {{x.get_data_evento}} - (<a href="evento/?id={{ x.id }}">Editar</a> ---- <a href="evento/delete/{{ x.id }}/">Excluir</a>)</b><br>
+        {% endfor %}
+    </body>
+</html>
